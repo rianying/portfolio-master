@@ -1122,7 +1122,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form onsubmit="sendEmail(); reset(); return false;" class="form" data-form>
+          <form class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" id='userfullname' name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1144,22 +1144,6 @@
       </article>
 
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(){
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "rahmadiyanaws@gmail.com",
-            Password : "35E61323D0F3D9D7BF769D755532FB466000",
-            To : 'rahmadiyanaws@gmail.com',
-            From : document.getElementById('useremail').value,
-            Subject : "New Message enquiry from " + document.getElementById('useremail').value,
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-      }
-    </script>
 
   </main>
 
