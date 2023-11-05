@@ -1122,12 +1122,12 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="/Users/rian/Documents/Github/portfolio-master/php/sendmail.php" class="form" data-form>
+          <form onsubmit="sendEmail(); reset(); return false;" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" id='useremail' name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
@@ -1144,6 +1144,22 @@
       </article>
 
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com.com",
+            Username : "rahmadiyanaws@gmail.com",
+            Password : "googlemail69",
+            To : 'riansshole123@gmail.com',
+            From : document.getElementById('useremail').value,
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
+      }
+    </script>
 
   </main>
 
