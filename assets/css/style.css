@@ -354,6 +354,27 @@ main {
   border-radius: 8px;
 }
 
+.info-download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Aligns children (the button) vertically center */
+  align-items: center; /* Aligns children (the button) horizontally center */
+  gap: 10px; /* Optional: adds space between items */
+  height: 100%; /* Adjust the height as necessary to fill the space between the yellow line and the education logo */
+}
+
+.info-download .download-button {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  padding: 3px 12px;
+  border-radius: 8px;
+  text-align: center; /* Ensures the text inside the button is centered */
+  /* width: max-content; This might need to be adjusted or removed depending on your layout */
+}
+
+
 .info_more-btn {
   position: absolute;
   top: -15px;
